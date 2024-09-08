@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA San Andreas Stories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            transition: all 0.3s ease-in-out;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #ffcc00 0%, #ff9900 100%);
+            color: #000000;
+            padding: 20px;
+            text-align: center;
+            font-size: 3em;
+            border-bottom: 4px solid #ff9900;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #0000ff;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 3px solid #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 4px;
+            margin: 0 10px;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ffcc00;
+            color: #0000ff;
+        }
+
+        section {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px auto;
+            border: 2px solid #000000;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        section h2 {
+            color: #0000ff;
+            font-size: 2.4em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #0000ff;
+            padding-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .credits-list h3 {
+            color: #ff9900;
+            font-size: 1.8em;
+            margin-top: 20px;
+            border-bottom: 1px solid #ff9900;
+            padding-bottom: 10px;
+        }
+
+        .credits-list ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .credits-list ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        footer {
+            background-color: #0000ff;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            border-top: 3px solid #ffffff;
+            position: relative;
+        }
+
+        a {
+            color: #0000ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #ff9900;
+        }
+
+        .discord-link {
+            display: block;
+            font-size: 1.2em;
+            margin: 20px 0;
+            padding: 15px;
+            text-align: center;
+            background-color: #7289da;
+            color: #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .discord-link:hover {
+            background-color: #5b6eae;
+        }
+
+        .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .section-icon {
+            color: #0000ff;
+            margin-right: 10px;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Section Dividers */
+        section::before {
+            content: "";
+            display: block;
+            height: 20px;
+            margin-bottom: 20px;
+            border-top: 2px dashed #0000ff;
+        }
+
+        section:first-of-type::before {
+            display: none;
+        }
+
+        /* Button Hover Animation */
+        nav a, .discord-link {
+            position: relative;
+        }
+
+        nav a::before, .discord-link::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffcc00;
+            z-index: -1;
+            transition: transform 0.3s ease;
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+
+        nav a:hover::before, .discord-link:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                font-size: 2.5em;
+            }
+
+            nav a {
+                font-size: 1em;
+                padding: 8px 15px;
+                margin: 0 5px;
+            }
+
+            section {
+                padding: 15px;
+                margin: 10px auto;
+            }
+
+            section h2 {
+                font-size: 2em;
+            }
+
+            .discord-link {
+                font-size: 1em;
+                padding: 10px;
+            }
+        }
+
+        /* Promotional Screenshots */
+        .promotional-screenshots {
+            text-align: center;
+        }
+
+        .promotional-screenshots img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border: 2px solid #000000;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    GTA San Andreas Stories
+</header>
+
+<nav>
+    <a href="#info"><i class="fas fa-info-circle icon"></i>Info</a>
+    <a href="#credits"><i class="fas fa-star icon"></i>Credits</a>
+    <a href="#youtube"><i class="fab fa-youtube icon"></i>YouTube</a>
+    <a href="#download"><i class="fas fa-download icon"></i>Download</a>
+    <a href="#screenshots"><i class="fas fa-image icon"></i>Screenshots</a>
+</nav>
+
+<section id="info">
+    <h2><i class="fas fa-info-circle section-icon"></i>About the Mod</h2>
+    <p><strong>GTA San Andreas Stories</strong>, also known as <strong>GTA San Andreas Stories: The Return of Ryder</strong> or <strong>GTA San Andreas Stories: 1987</strong>, is a fan-made, work-in-progress mod by <strong>babamohammed2022</strong> that aims to recreate the vibe of the GTA Stories series.</p>
+    <p>The story utilizes <strong>DYOM 8.1</strong> and follows Ryder as he returns to San Andreas in 1987, encountering new adventures and reconnecting with old friends.</p>
+    <p>For more information and a FAQ, join our <a href="https://discord.gg/Wcm7sPMv" target="_blank" class="discord-link"><i class="fab fa-discord icon"></i>Discord Server</a>.</p>
+    <p><strong>Disclaimer:</strong> If you are using the <strong>Essential Modpack</strong>, please delete the <strong>Widescreen mod</strong> from Modloader to avoid game crashes on startup. Additionally, be aware that <strong>SAMP</strong> and the <strong>Widescreen mod</strong> are incompatible with the modpack.</p>
+</section>
+
+<section id="credits">
+    <h2><i class="fas fa-star section-icon"></i>Credits</h2>
+    <div class="credits-list">
+        <h3>Outfits and Retextures</h3>
+        <ul>
+            <li><strong>Endochronic</strong>: Outfit for Ryder, retexture of the interior of Sweet's house, additional ped models</li>
+            <li><strong>14todoeltiempodc</strong>: Weapon retextures</li>
+        </ul>
+        <h3>Mappings</h3>
+        <ul>
+            <li><strong>Frankou</strong>: Mappings from Life from San Andreas (a great mod, check it out!)</li>
+            <li><strong>Rule Breakers</strong>: Additional mappings</li>
+        </ul>
+        <h3>Special Effects</h3>
+        <ul>
+            <li><strong>Junior_djjr</strong>: Speed camera shake effect</li>
+        </ul>
+        <h3>Stores</h3>
+        <ul>
+            <li><strong>Sasquad</strong>: Pig Pen store</li>
+        </ul>
+        <h3>Animations</h3>
+        <ul>
+            <li><strong>Yucark</strong>: Original VCS animations</li>
+            <li><strong>Cerdquad</strong>, <strong>Frankou</strong>, and <strong>me</strong>: Modified VCS animations</li>
+        </ul>
+        <h3>Cars</h3>
+        <ul>
+            <li><strong>TheMademan</strong>: Admiral, Bobcat, Glendale, etc.</li>
+            <li><strong>Hirrui</strong>: Beta VCS motorbike</li>
+            <li><strong>Timjab</strong>: Beamer (Landstalker)</li>
+            <li><strong>MDXNaTioN</strong>: VCS Wintergreen</li>
+            <li><strong>Qwerty Van Hallen</strong>: VCPD car (restyled to fit GTA SAS)</li>
+            <li><strong>Threeton</strong>: Muira (Turismo), Nissan (Camper)</li>
+            <li><strong>Automan</strong>, <strong>zeb89</strong>: New Kuruma (Vincent)</li>
+        </ul>
+        <h3>Original Authors</h3>
+        <ul>
+            <li>Special thanks to the original creators of the Vice City styled cars. Your contributions are invaluable and greatly appreciated.</li>
+        </ul>
+        <h3>Outfit Models</h3>
+        <ul>
+            <li><strong>Cleoude</strong>: Model of Tenpenny, Big Smoke cop</li>
+            <li><strong>Endochronic</strong>: Some of the other models (Ryder, etc.)</li>
+            <li><strong>Rule Breakers</strong>, <strong>Mike</strong> & <strong>abdullah645</strong>: Models (Brian-outfits of Ryder and more)</li>
+        </ul>
+        <h3>Piggsy Model</h3>
+        <ul>
+            <li><strong>Skylermilligan</strong>: Piggsy model</li>
+        </ul>
+        <h3>Missions</h3>
+        <ul>
+            <li><strong>Small Cheseg</strong>, <strong>Abdullah</strong>, <strong>Mike</strong>, <strong>me</strong>, <strong>Noobshakespeare</strong></li>
+        </ul>
+        <h3>Testing</h3>
+        <ul>
+            <li><strong>Elrico</strong>, <strong>Armin Love</strong>, <strong>Cerdquad</strong>, <strong>Azitomis</strong>, <strong>Lostmcclaude</strong>, and more</li>
+        </ul>
+        <h3>Billboards</h3>
+        <ul>
+            <li><strong>Northstationx</strong>, <strong>Alexandra</strong>, <strong>me</strong></li>
+        </ul>
+        <h3>Storywriting for Chapter 3</h3>
+        <ul>
+            <li><strong>Houssem</strong></li>
+        </ul>
+        <h3>Radar Icons</h3>
+        <ul>
+            <li><strong>Cerdquad</strong> and <strong>me</strong> (original by AG_'s Classichud)</li>
+        </ul>
+        <h3>Screenshots</h3>
+        <ul>
+            <li><strong>Me</strong>, <strong>Frankou</strong>, <strong>Cerdquad</strong>, <strong>Rule Breakers</strong>, <strong>Elrico</strong></li>
+        </ul>
+        <h3>Manual</h3>
+        <ul>
+            <li><strong>Me</strong>, <strong>Frankou</strong>, <strong>Cerdquad</strong>, <strong>Bolszewik</strong>, <strong>Mike</strong></li>
+        </ul>
+        <h3>Videos</h3>
+        <ul>
+            <li><strong>GTAMissionsCreator</strong></li>
+        </ul>
+    </div>
+</section>
+
+<section id="youtube">
+    <h2><i class="fab fa-youtube section-icon"></i>YouTube Channel</h2>
+    <p>Check out our <a href="https://www.youtube.com/@cerdopalo2394" target="_blank"><i class="fab fa-youtube icon"></i>YouTube channel</a> for updates, gameplay videos, and behind-the-scenes content!</p>
+</section>
+
+<section id="download">
+    <h2><i class="fas fa-download section-icon"></i>Download the Mod</h2>
+    <p>Ready to dive into the world of <strong>GTA San Andreas Stories</strong>? Click the link below to download the mod and start your journey.</p>
+    <a href="your-download-link-here" class="discord-link"><i class="fas fa-download icon"></i>Download Now</a>
+</section>
+
+<section id="screenshots" class="promotional-screenshots">
+    <h2><i class="fas fa-image section-icon"></i>Promotional Screenshots</h2>
+    <img src="file:///C:/Users/Abdullah/Downloads/c.png" alt="Screenshot 1">
+    <img src="file:///C:/Users/Abdullah/Downloads/Picsart_24-08-24_12-12-14-625.jpg" alt="Screenshot 2">
+    <img src="file:///C:/Users/Abdullah/Downloads/image.png" alt="Screenshot 3">
+    <img src="file:///C:/Users/Abdullah/Downloads/captura_by_FrankoU_28_11.png" alt="Screenshot 4">
+</section>
+
+<footer>
+    &copy; 2024 GTA San Andreas Stories. All rights reserved.
+</footer>
+
+</body>
+</html>
